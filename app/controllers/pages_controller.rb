@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  
-  def fblogin
+  def home
+    @title = "Home"
   end
-  
+
 end
