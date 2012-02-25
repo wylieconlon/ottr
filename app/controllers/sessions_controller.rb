@@ -6,10 +6,14 @@ class SessionsController < ApplicationController
   
   def fblogin
     @user = User.find_by_email(params[:email])
-    # /user/1
-    print "#{@user}"
-    @title = @user.name
-    render 'new'
+    if @user.nil?
+      redirect_to 'signup', :email => params[:email], :name => params[:name]
+    else
+      redirect_to root_path
+    end
+  end
+  
+  def fblogout
   end
 
 end
