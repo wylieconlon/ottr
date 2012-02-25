@@ -1,4 +1,14 @@
 OttrApp::Application.routes.draw do
+  get "sessions/new"
+
+  resources :users
+  
+  get 'sessions/new'
+  
+  match '/signup',    :to => 'users#new'
+  match '/fbsignin', :to => 'sessions#fblogin'
+  match '/fbsignout', :to => 'sessions#fbdestroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
