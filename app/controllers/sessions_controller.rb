@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   
   def fblogin
     @user = User.find_by_email(params[:email])
+    # /user/1
     print "#{@user}"
     @title = @user.name
     render 'new'
