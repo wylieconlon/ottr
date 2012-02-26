@@ -76,7 +76,15 @@ header {
 	font-size: 6em;
 }
 
-#banner .grid_6 {
+#banner-inner {
+	width: 940px;
+	margin: 0 auto;
+}
+#banner .banner_left, #banner .banner_right {
+	float: left;
+	width: 470px;
+}
+#banner .banner_left {
 	position: relative;
 }
 
