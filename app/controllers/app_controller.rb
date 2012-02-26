@@ -1,4 +1,8 @@
 class AppController < ApplicationController
-  def home
+  def index
+    @ideas = Idea.all
+  end
+  
+  def new
   end
 end

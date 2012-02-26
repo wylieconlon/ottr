@@ -1,0 +1,29 @@
+<h1>Listing ideas</h1>
+
+<table>
+  <tr>
+    <th>What</th>
+    <th>Where</th>
+    <th>When</th>
+    <th>Who</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ideas.each do |idea| %>
+  <tr>
+    <td><%= idea.what %></td>
+    <td><%= idea.where %></td>
+    <td><%= idea.when %></td>
+    <td><%= idea.who %></td>
+    <td><%= link_to 'Show', idea %></td>
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+    <td><%= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Idea', new_idea_path %>
