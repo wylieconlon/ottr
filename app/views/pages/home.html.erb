@@ -1,10 +1,15 @@
 <% if signed_in? %>
+
+<%= current_user.ideas %>
+
 <h1>Easy planning.</h1>
 
 <h1>The User is Signed In: <%= current_user.email %></h1>
 
 <% else %>
+
 <title><%=@title%></title>
 <h1>Sample App</h1>
 <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+
 <% end %>
