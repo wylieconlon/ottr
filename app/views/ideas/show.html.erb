@@ -1,7 +1,13 @@
+<div id="idea_page">
+
 <p id="notice"><%= notice %></p>
 
 <%= render 'idea' %>
+
+<% if signed_in? %>
 <%= render 'shared/commenter' %>
 <ul>
 <%= render @comments %>
 </ul>
+<% end %>
+</div>
