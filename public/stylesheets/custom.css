@@ -7,6 +7,7 @@
 
 body {
 	background : #fff;
+	-webkit-text-resize: none;
 }
 
 section {
@@ -46,10 +47,16 @@ a:visited {
 	color: #069;
 }
 
+body {
+	padding: 0 10px;
+}
 .container {
 	width: 100%;
 }
 @media screen and (min-width: 940px) {
+	body {
+		padding: 0;
+	}
 	.container {
 		width: 940px;
 		margin-left: auto;
@@ -76,24 +83,39 @@ header {
 	font-size: 6em;
 }
 
-#banner-inner {
-	width: 940px;
-	margin: 0 auto;
+#banner {
+	margin: 0 -10px;
 }
-#banner .banner_left, #banner .banner_right {
-	float: left;
-	width: 470px;
-}
+
 #banner .banner_left {
 	position: relative;
 }
 
+#banner .banner_left {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#banner .banner_right {
+	min-width: 0;
+	margin: 0 auto;
+}
+#banner .banner_right iframe {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
 #register_container {
-	position: absolute;
+	position: relative;
 	font-weight: 900;
 	font-size: 2em;
 	text-align: center;
 	left: 0;
+	bottom: 0;
+	width: 200px;
+	height: 55px;
+	margin: 0 auto;
+	margin-bottom: 1em;
 }
 #register_button, #register_button_shadow {
 	position: absolute;
@@ -120,6 +142,68 @@ header {
 #register_button:hover {
 	top: 0;
 }
+
+
+@media screen and (min-width: 940px) {
+	#banner-inner {
+		width: 940px;
+		margin: 0 auto;
+	}
+	
+	#banner .banner_left, #banner .banner_right {
+		float: left;
+		width: 470px;
+	}
+	
+	#banner .banner_left {
+		height: 315px;
+		text-align: left;
+	}
+	
+	#register_container {
+		margin: 0;
+	}
+	
+	#banner .banner_right iframe {
+		width: 420px;
+	}	
+}
+
+
+/*#register_container {
+	position: relative;
+	font-weight: 900;
+	font-size: 2em;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+}
+#register_button, #register_button_shadow {
+	position: absolute;
+	padding: 10px;
+	width: 200px;
+	color: #fff;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	text-decoration: none;
+	
+	font-size: 1.33em;
+}
+#register_button {
+	background: #00a99d;
+	bottom: 2px;
+}
+#register_button_shadow {
+	background: #008f85;
+	bottom: -1px;
+}
+#register_button:hover {
+	bottom: 0;
+}*/
 
 footer {
 	margin-top: 2em;
