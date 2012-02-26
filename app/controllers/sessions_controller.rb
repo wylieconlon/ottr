@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   
   def fblogin
     @app_key = "e046639ad76c13c08ec696376e535062"
+    puts "Facebook Login #{params}"
     arguments = FacebookAuthentication::parse_signed_request(params[:signed_request], @app_key)
     puts "Facebook Parameters: #{arguments}"
     
