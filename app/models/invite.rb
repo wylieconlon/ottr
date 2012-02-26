@@ -1,8 +1,5 @@
 class Invite < ActiveRecord::Base
-  attr_accessible :email
+  attr_accessible :email # actually the phone number
   belongs_to :idea
   
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, :presence => true,
-                    :format =>  { :with => email_regex }
 end

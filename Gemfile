@@ -9,6 +9,8 @@ gem 'devise'
 gem 'oauth2'
 gem 'omniauth-facebook'
 
+gem 'twilio-ruby'
+
 gem 'nifty-generators'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
