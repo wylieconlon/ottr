@@ -126,6 +126,19 @@ footer {
 	margin-bottom: 2em;
 }
 
+/* Icons */
+.icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 2px;
+	background-image: url('/images/icons.png');
+	vertical-align: middle;
+}
+.icon.time {
+	background-position: -16px 0;
+}
+
 /* Idea list page */
 
 #idea_list, #idea_create, #idea_page, #idea_edit {
@@ -136,11 +149,16 @@ footer {
 	border-radius: 10px;
 }
 
-#idea_list li, .idea_details {
+.idea, .idea {
 	background: #fff;
 	padding: 20px;
 	margin-bottom: 20px;
 	clear: both;
+}
+
+.idea .actions div {
+	float: left;
+	margin-right: 20px;
 }
 
 #float_idea, #float_idea_shadow {
