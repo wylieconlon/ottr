@@ -1,14 +1,10 @@
 OttrApp::Application.routes.draw do
   resources :ideas
-  resources :users
   
-  get 'sessions/new'
-  
-  match '/signup',    :to => 'users#new'
-  match '/fbsignin', :to => 'sessions#fblogin'
-  match '/fbsignout', :to => 'sessions#fbdestroy'
   match '/app', :to => 'app#index'
   match '/app/new', :to => 'app#new'
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
