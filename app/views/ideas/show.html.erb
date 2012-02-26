@@ -1,22 +1,19 @@
 <div id="idea_page">
 
-<div class="idea_details">
+<div class="idea_details idea">
 <h2><%= @idea.what %></h2>
-<p>
-  <b>Where:</b>
-  <%= @idea.where %>
-</p>
+<div class="ago"><%= time_ago_in_words(@idea.updated_at) %> ago</div>
 
-<p>
-  <b>When:</b>
-  <%= @idea.when %>
-</p>
+<div class="actions">
+	<% whereText = @idea.where.empty? ? "Anywhere" : idea.where %>
+	<% whenText  = @idea.when.empty?  ? "Any time" : idea.when %>
+	
+	<div class="location"><span class="icon loc"></span><%= whereText %></div>
+	
+	<div class="time"><span class="icon time"></span><%= whenText %></div>
+</div>
 
-<p>
-  <b>Who:</b>
-  <%= User.find(@idea.organizer).email %>
-</p>
-
+<div class="clear"></div>
 
 <% if current_user.id == @idea.organizer %>
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
