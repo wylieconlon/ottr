@@ -1,10 +1,11 @@
 <%= form_for(@comment) do |f| %>
 <div class="field">
-	<%= f.label :message %>
-	<%= f.text_field :message %>
+	<%= f.text_field :message, :placeholder => "Write a comment" %>
 </div>
 <%= f.hidden_field :idea_id, :value => @idea.id %>
 <div class="actions">
 	<%= f.submit %>
 </div>
+
+<div class="clearfix"></div>
 <% end %>

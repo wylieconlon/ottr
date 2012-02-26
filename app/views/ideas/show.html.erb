@@ -1,7 +1,6 @@
 <div id="idea_page">
 
-<p id="notice"><%= notice %></p>
-
+<div class="idea_details">
 <h2><%= @idea.what %></h2>
 <p>
   <b>Where:</b>
@@ -25,6 +24,8 @@
 <% end %>
 
 <%= link_to 'Back', ideas_path %>
+</div>
+</div>
 
 <% if signed_in? %>
 <%= render 'shared/commenter' %>
