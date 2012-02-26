@@ -434,6 +434,8 @@ a.head_btn, a.head_btn_shadow {
 	border-radius: 3px;
 	
 	cursor: pointer;
+	
+	-webkit-appearance: none;
 }
 #comment_submit {
 	top: -1px;
