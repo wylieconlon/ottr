@@ -191,6 +191,12 @@ footer {
 .icon.time {
 	background-position: -16px 0;
 }
+.icon.delete {
+	background-position: 0 -16px;
+}
+.icon.edit {
+	background-position: -16px -16px;
+}
 
 /* Idea list page */
 
