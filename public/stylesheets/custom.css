@@ -212,6 +212,7 @@ footer {
 	position: relative;
 	background: #fff;
 	padding: 20px;
+	padding-right: 40px;
 	border-bottom: 2px solid #008f85;
 	margin-bottom: 20px;
 	clear: both;
@@ -223,6 +224,8 @@ footer {
 .idea .ago {
 	display: inline-block;
 	color: #666;
+	margin-left: 5px;
+	margin-bottom: 1em;
 }
 .idea .actions {
 	clear: both;
@@ -279,18 +282,11 @@ a.head_btn, a.head_btn_shadow {
 }
 
 .user_controls {
-	display: block;
-	margin-top: 1em;
-}
-
-
-/*
-#signup_header {
 	position: absolute;
-	width: 120px;
+	top: 20px;
+	right: 20px;
 }
-#signup_header 
-*/
+
 
 /* Idea create page */
 

@@ -9,17 +9,20 @@
 <ul>
 <% @ideas.each do |idea| %>
 	<li class="idea">
-	<h2><%= link_to idea.what, idea %></h2>
+	<% itemTitle = idea.what.empty? ? "Let's hang out" : idea.what %>
+	<h2><%= link_to itemTitle, idea %></h2>
 	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
 	<%= link_to "", idea, :class => "arrow" %>
 	
-	<div class="actions">
+	<div class="actions clearfix">
 		<% whereText = idea.where.empty? ? "Anywhere" : idea.where %>
 		<% whenText  = idea.when.empty?  ? "Any time" : idea.when %>
 		
 		<div class="location"><span class="icon loc"></span><%= whereText %></div>
 		
 		<div class="time"><span class="icon time"></span><%= whenText %></div>
+		
+		<div class="clear"></div>
 	</div>
 	
 	</li>

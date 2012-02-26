@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     puts "#{@comment.idea_id}-#{@comment.commenter_id}-#{@comment.message}"
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to(@idea, :notice => 'Comment was successfully created.') }
+        format.html { redirect_to(@idea) }
         format.xml  { render :xml => @idea, :status => :created, :location => @idea }
       else
         format.html { redirect_to(@idea, :notice => 'Comment was Not created.') }
