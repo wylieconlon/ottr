@@ -9,16 +9,20 @@
 		since Web Browsers cannot send DELETE requests natively -->
 </head>
 <body>
-	<div class="container">
-		<%= render 'layouts/header' %>
-		<section class="round">
-			<% flash.each do |key, value| %>
-				<%= content_tag(:div, value, :class => "flash #{key}") %>
-			<% end %>
-			<%= yield %>
-		</section>
-		<%= render 'layouts/footer' %>
-		<%= debug(params) if Rails.env.development? %>
+	<%= render 'layouts/header' %>
+
+	<section>
+		<% flash.each do |key, value| %>
+			<%= content_tag(:div, value, :class => "flash #{key}") %>
+		<% end %>
+		<% if is_not_splashpage? %><div class="container_12"><% end %>
+		<%= yield %>
+		<% if is_not_splashpage? %></div><% end %>
+		
+	</section>
+
+	<%= render 'layouts/footer' %>
+	<%= debug(params) if Rails.env.development? %>
 	</div>
 </body>
 </html>

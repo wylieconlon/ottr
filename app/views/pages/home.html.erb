@@ -12,8 +12,24 @@
 
 <% else %>
 
-<title><%=@title%></title>
-<h1>Sample App</h1>
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<div id="home">
+<div id="banner">
+	<div class="container_12">
+		<div class="grid_6">
+			<h1>The super social planning app</h1>
+			
+			<div id="register_button">
+			<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+			</div>
+		</div>
+		
+		<div class="grid_6">
+		Product screenshots
+		</div>
+		
+		<div class="clearfix"></div>
+	</div>
+</div>
 
+</div>
 <% end %>
