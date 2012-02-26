@@ -5,6 +5,11 @@ gem 'rails', '3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'devise'
+gem 'oauth2'
+gem 'omniauth-facebook'
+
+gem 'nifty-generators'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :development do

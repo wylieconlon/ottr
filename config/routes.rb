@@ -1,12 +1,8 @@
 OttrApp::Application.routes.draw do
 
+  devise_for :users
+
   resources :users
-  
-  get 'sessions/new'
-  
-  match '/signup',    :to => 'users#new'
-  match '/fblogin', :to => 'sessions#fblogin'
-  match '/fblogout', :to => 'sessions#fbdestroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     
     @user = User.find_by_email(@arguments[:email])
     if @user.nil?
-      redirect_to 'signup', :email => arguments[:email], :name => arguments[:name]
+      redirect_to 'signup', :email => arguments[:registration][:email], :name => arguments[:registration][:name]
     else
       redirect_to root_path
     end
