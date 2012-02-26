@@ -4,8 +4,15 @@
 	
 	<nav>
 		<% if signed_in? %>
-		<%= link_to "Float an Idea", new_idea_path, :id => "float_idea_shadow" %>
-		<%= link_to "Float an Idea", new_idea_path, :id => "float_idea" %>
+		<%= link_to "Float an Idea", new_idea_path, :class => "head_btn_shadow" %>
+		<%= link_to "Float an Idea", new_idea_path, :class => "head_btn" %>
+		<% else %>
+		
+			<div id="signup">
+			<%= link_to "Sign up", user_omniauth_authorize_path(:facebook), :class => "head_btn_shadow" %>
+			<%= link_to "Sign up", user_omniauth_authorize_path(:facebook), :class => "head_btn" %>
+			</div>
+		
 		<% end %>
 	</nav>
 </header>

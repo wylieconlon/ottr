@@ -232,7 +232,7 @@ footer {
 	margin-right: 20px;
 }
 
-#float_idea, #float_idea_shadow {
+.head_btn, .head_btn_shadow {
 	display: block;
 	position: absolute;
 	padding: 10px;
@@ -244,19 +244,24 @@ footer {
 	border-radius: 3px;
 
 	font-size: 1.33em;
+	
+	color: #fff;
 }
-#float_idea {
+a.head_btn, a.head_btn_shadow {
+	color: #fff;
+}
+.head_btn {
 	background: #f5ab18;
 	color: #fff;
 
 	bottom: 23px;
 }
-#float_idea_shadow {
+.head_btn_shadow {
 	background: #cc8f14;
 	
 	bottom: 20px;
 }
-#float_idea:hover {
+.head_btn:hover {
 	text-decoration: none;
 	bottom: 21px;
 }
@@ -277,6 +282,15 @@ footer {
 	display: block;
 	margin-top: 1em;
 }
+
+
+/*
+#signup_header {
+	position: absolute;
+	width: 120px;
+}
+#signup_header 
+*/
 
 /* Idea create page */
 
