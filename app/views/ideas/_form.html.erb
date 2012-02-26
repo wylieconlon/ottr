@@ -12,19 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :what %><br />
-    <%= f.text_field :what, :placeholder => "Placeholder" %>
+    <%= f.label :what %>
+    <%= f.text_field :what, :placeholder => "What's the idea?" %>
+  </div>
+  <div class="">
+	  <div class="field">
+		<%= f.label :where %>
+		<%= f.text_field :where %>
+	  </div>
+	  <div class="field">
+		<%= f.label :when %>
+		<%= f.text_field :when %>
+	  </div>
   </div>
   <div class="field">
-    <%= f.label :where %><br />
-    <%= f.text_field :where %>
-  </div>
-  <div class="field">
-    <%= f.label :when %><br />
-    <%= f.text_field :when %>
-  </div>
-  <div class="field">
-  	<%= label_tag :emails, "Email addresses to invite" %>
+  	<%= label_tag :emails, "Email addresses to invite", :placeholder => "Invite your friends via email" %>
   	<%= text_field_tag(:email) %>
   </div>
   
