@@ -261,6 +261,8 @@ footer {
 	font-size: 1.33em;
 	
 	color: #fff;
+	
+	-webkit-appearance: none;
 }
 a.head_btn, a.head_btn_shadow {
 	color: #fff;
