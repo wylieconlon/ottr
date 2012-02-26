@@ -5,8 +5,8 @@
 <div class="ago"><%= time_ago_in_words(@idea.updated_at) %> ago</div>
 
 <div class="actions">
-	<% whereText = @idea.where.empty? ? "Anywhere" : idea.where %>
-	<% whenText  = @idea.when.empty?  ? "Any time" : idea.when %>
+	<% whereText = @idea.where.empty? ? "Anywhere" : @idea.where %>
+	<% whenText  = @idea.when.empty?  ? "Any time" : @idea.when %>
 	
 	<div class="location"><span class="icon loc"></span><%= whereText %></div>
 	
