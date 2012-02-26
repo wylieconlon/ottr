@@ -13,7 +13,7 @@
 
 	<section>
 		<% flash.each do |key, value| %>
-			<%= content_tag(:div, value, :class => "flash #{key}") %>
+			<%= content_tag(:div, value, :class => "flash #{key} container") %>
 		<% end %>
 		<% if is_not_splashpage? %><div class="container_12"><% end %>
 		<%= yield %>

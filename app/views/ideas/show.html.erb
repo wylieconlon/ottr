@@ -1,8 +1,31 @@
 <div id="idea_page">
 
-<p id="notice"><%= notice %></p>
+<div class="idea_details">
+<h2><%= @idea.what %></h2>
+<p>
+  <b>Where:</b>
+  <%= @idea.where %>
+</p>
 
-<%= render 'idea' %>
+<p>
+  <b>When:</b>
+  <%= @idea.when %>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= User.find(@idea.organizer).email %>
+</p>
+
+
+<% if current_user.id == @idea.organizer %>
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Destroy', @idea, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<%= link_to 'Back', ideas_path %>
+</div>
+</div>
 
 <% if signed_in? %>
 <%= render 'shared/commenter' %>
