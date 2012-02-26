@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20120226025307) do
     t.datetime "updated_at"
   end
 
+ActiveRecord::Schema.define(:version => 20120226030945) do
+
   create_table "ideas", :force => true do |t|
     t.string   "what"
     t.string   "where"
@@ -27,6 +29,11 @@ ActiveRecord::Schema.define(:version => 20120226025307) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "organizer"
+  end
+
+  create_table "ideas_users", :id => false, :force => true do |t|
+    t.integer "idea_id"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|
