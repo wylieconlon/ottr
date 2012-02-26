@@ -1,5 +1,6 @@
 OttrApp::Application.routes.draw do
   resources :ideas
+  resources :comments
   
   match '/app', :to => 'app#index'
   match '/app/new', :to => 'app#new'
