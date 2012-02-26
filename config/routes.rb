@@ -1,7 +1,7 @@
 OttrApp::Application.routes.draw do
   resources :ideas
   resources :comments, :only => [:create]
-  resources :invites, :only => [:create]
+  resources :invites, :only => [:update]
   
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   

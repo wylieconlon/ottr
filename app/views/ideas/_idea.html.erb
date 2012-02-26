@@ -18,6 +18,23 @@
   <%= User.find(@idea.organizer).email %>
 </p>
 
+<div>
+<% if @count > 0 %>
+	<span><%=pluralize(@count, "thumb") %> up!</span>
+<% end %>
+<% if !@invite.nil? 
+	if @count > 0
+	%> | 
+	<% end 
+	if @invite.vote
+	%>You Thumbed Up!
+	<% else %>
+	<%= form_for @invite, :html => { :method => :put }, :remote => true do |f| %>
+		<div class="actions"><%= f.submit "Thumps Up!"%></div>
+	<% end %>
+	<% end %>
+<% end %>
+</div>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>
