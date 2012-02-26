@@ -4,8 +4,8 @@ describe UsersController do
 
   describe "GET 'new'" do
     it "should be successful" do
-      signed_request = "iH4Dq5DUuaR1iyBCOShvbc426N0TteAzqSqs6R5vPR8.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzMzAyMTgwMDAsImlzc3VlZF9hdCI6MTMzMDIxMzkzNiwib2F1dGhfdG9rZW4iOiJBQUFGbVpDSnJ2VndJQkFKSm1EWWRneDdiRWFoY05BRzZnWkNYSWEyd0daQ1pCYjIwYkVOdnFlbjNNdk9aQng0SWpsQkR5bFNoZk4xTHdwbUlkNXdZVUNuQVhVY1VFWkFWUkw0U2pzR2lDZEVBWkRaRCIsInJlZ2lzdHJhdGlvbiI6eyJuYW1lIjoiTGVvbiBLYXkiLCJlbWFpbCI6Imxlb2theVx1MDA0MGdtYWlsLmNvbSJ9LCJyZWdpc3RyYXRpb25fbWV0YWRhdGEiOnsiZmllbGRzIjoiW3snbmFtZSc6J25hbWUnfSwgeyduYW1lJzonZW1haWwnfV0ifSwidXNlciI6eyJjb3VudHJ5IjoidXMiLCJsb2NhbGUiOiJlbl9VUyJ9LCJ1c2VyX2lkIjoiNTAyMDYwMjMifQ"
-      args = FacebookAuthentication::parse_signed_request(signed_request, 'e046639ad76c13c08ec696376e535062')
+      signed_request = "AQBaYWZ8CngFL_ySuoDAkNH2JYRRXKhOu6_kxTdAY-sP3pZfidZXtcoYaU_YnzSZWLEmEW9P2SVNzz3O9HPmeis9ontUXq2DJx02CUFthHLAkCGNpU1ls6pENvGCGlOAyAS1WcKuVpLKjMofTTI-wtYBmHaaqAB6WCDgIzFtVOdgCQzBJ2nec6TJxpcpO_s8eOU"
+      args = FacebookAuthentication::parse_signed_request(signed_request, '150565638397986')
       print args
     end
   end
