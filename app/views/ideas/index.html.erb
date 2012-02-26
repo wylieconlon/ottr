@@ -5,11 +5,17 @@
 <% else %>
 <ul>
 <% @ideas.each do |idea| %>
-	<li>
+	<li class="idea">
 	<h2><%= link_to idea.what, idea %></h2>
 	
-	<div class="location"><%= idea.where %></div>
-	<div class="time"><%= idea.when %></div>
+	<div class="actions">
+		<% whereText = idea.where.empty? ? "Anywhere" : idea.where %>
+		<% whenText  = idea.when.empty?  ? "Any time" : idea.when %>
+		
+		<div class="location"><span class="icon loc"></span><%= whereText %></div>
+		
+		<div class="time"><span class="icon time"></span><%= whenText %></div>
+	</div>
 	
 	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
 	</li>
