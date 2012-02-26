@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120226092726) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "voter_id"
-    t.integer  "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007f8c5b9573f8>"
+    t.integer  "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007f9745902bb0>"
   end
 
 end

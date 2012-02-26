@@ -23,6 +23,11 @@
     <%= f.label :when %><br />
     <%= f.text_field :when %>
   </div>
+  <div class="field">
+  	<%= label_tag :emails, "Email addresses to invite" %>
+  	<%= text_field_tag(:email) %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
