@@ -1,20 +1,18 @@
 <div id="home">
 <div id="banner">
-	<div class="container_12">
-		<div class="grid_6">
-			<h1>The super social planning app</h1>
-			
-			<div id="register_container">
-			<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button_shadow" %>
-			<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button" %>
-			</div>
-		</div>
+	<div class="banner_left">
+		<h1>The super social planning app</h1>
 		
-		<div class="grid_6">
-		Product screenshots
+		<div id="register_container">
+		<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button_shadow" %>
+		<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button" %>
 		</div>
-		
-		<div class="clearfix"></div>
 	</div>
+	
+	<div class="banner_right">
+	Product screenshots
+	</div>
+		
+	<div class="clearfix"></div>
 </div>
 </div>
