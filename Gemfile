@@ -11,6 +11,8 @@ gem 'omniauth-facebook'
 
 gem 'twilio-ruby'
 
+gem 'bitly'
+
 gem 'nifty-generators'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
