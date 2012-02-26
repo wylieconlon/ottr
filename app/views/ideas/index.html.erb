@@ -8,7 +8,7 @@
 <ul>
 <% @ideas.each do |idea| %>
 	<li>
-	<h2><%= idea.what %></h2>
+	<h2><%= link_to idea.what, idea %></h2>
 	
 	<div class="location"><%= idea.where %></div>
 	<div class="time"><%= idea.when %></div>
@@ -16,7 +16,6 @@
 	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
 	
 	<% if current_user.id == idea.organizer %>
-	<%= link_to 'Show', idea %>
 	<%= link_to 'Edit', edit_idea_path(idea) %>
 	<%= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete %>
 	<% end %>

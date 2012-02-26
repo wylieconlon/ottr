@@ -93,7 +93,7 @@ footer {
 
 /* Idea list page */
 
-#idea_list, #idea_create {
+#idea_list, #idea_create, #idea_page, #idea_edit {
 	background: #00a99d;
 	padding: 20px;
 	-webkit-border-radius: 10px;
@@ -126,13 +126,17 @@ footer {
 	display: block;
 }
 .field input {
+	width: 420px;
 	padding: 10px;
 	border: 0;
+	margin: 0;
 	
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
+
+
 
 #idea_what {
 	font-size: 2em;
