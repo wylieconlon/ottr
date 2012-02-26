@@ -10,15 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226012916) do
+ActiveRecord::Schema.define(:version => 20120226025307) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "idea_id"
+    t.integer  "commenter_id"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ideas", :force => true do |t|
     t.string   "what"
     t.string   "where"
     t.string   "when"
-    t.string   "who"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "organizer"
   end
 
   create_table "users", :force => true do |t|
@@ -40,5 +48,14 @@ ActiveRecord::Schema.define(:version => 20120226012916) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "vote",                                                                  :default => 0
+    t.integer  "idea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "voter_id"
+    t.integer  "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007f8c5b9573f8>"
+  end
 
 end
