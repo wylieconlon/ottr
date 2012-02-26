@@ -80,7 +80,7 @@ header {
 }
 #banner h1 {
 	color: #f5ab18;
-	font-size: 6em;
+	font-size: 4.5em;
 }
 
 #banner {
@@ -110,8 +110,6 @@ header {
 	font-weight: 900;
 	font-size: 2em;
 	text-align: center;
-	left: 0;
-	bottom: 0;
 	width: 200px;
 	height: 55px;
 	margin: 0 auto;
@@ -145,27 +143,34 @@ header {
 
 
 @media screen and (min-width: 940px) {
+	#banner h1 {
+		font-size: 6em;
+	}
 	#banner-inner {
 		width: 940px;
 		margin: 0 auto;
 	}
-	
 	#banner .banner_left, #banner .banner_right {
 		float: left;
-		width: 470px;
 	}
-	
 	#banner .banner_left {
+		width: 500px;
 		height: 315px;
 		text-align: left;
 	}
+	#banner .banner_right {
+		width: 440px;
+	}
 	
 	#register_container {
+		position: absolute;
 		margin: 0;
+		bottom: 0;
 	}
 	
 	#banner .banner_right iframe {
 		width: 420px;
+		margin-left: 20px;
 	}	
 }
 
