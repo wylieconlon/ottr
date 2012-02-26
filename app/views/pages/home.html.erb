@@ -1,6 +1,10 @@
 <% if signed_in? %>
 
-<%= current_user.ideas %>
+<ul>
+<% current_user.ideas.each do |idea| %>
+	<li><%= idea.inspect %></li>
+<% end %>
+</ul>
 
 <h1>Easy planning.</h1>
 
