@@ -128,6 +128,8 @@ header {
 	text-decoration: none;
 	
 	font-size: 1.33em;
+	
+	-webkit-appearance: none;
 }
 #register_button {
 	background: #00a99d;
@@ -362,6 +364,8 @@ a.head_btn, a.head_btn_shadow {
 	border-radius: 3px;
 	
 	cursor: pointer;
+	
+	-webkit-appearance: none;
 }
 #idea_submit {
 	top: -1px;
