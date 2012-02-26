@@ -4,8 +4,9 @@
 		<div class="grid_6">
 			<h1>The super social planning app</h1>
 			
-			<div id="register_button">
-			<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+			<div id="register_container">
+			<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button_shadow" %>
+			<%= link_to "Get Started", user_omniauth_authorize_path(:facebook), :id => "register_button" %>
 			</div>
 		</div>
 		

@@ -47,43 +47,59 @@ a:visited {
 }
 
 /* Navigation */
-nav {
-	float: right;
-}
-
-nav ul li {
-	display: inline-block;
-}
-
-nav ul li a {
-	font-weight: bold;
-}
-
-nav ul li a:visited{
-	color: #09c;
-}
-
-nav ul li a:hover{
-	text-decoration: underline;
+header {
+	position: relative;
 }
 
 /* Home page */
 #banner {
+	font-family: 'Overlock', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: 700;
 	background: #f2ecd5;
 	padding: 20px 0;
+	min-height: 240px;
 }
 #banner h1 {
 	color: #f5ab18;
-	font-size: 500%;
+	font-size: 6em;
 }
 
-#register_button {
-	background: #00a99d;
+#banner .grid_6 {
+	position: relative;
+}
+
+#register_container {
+	position: absolute;
+	font-weight: 900;
+	font-size: 2em;
+	text-align: center;
+	left: 0;
+}
+#register_button, #register_button_shadow {
+	position: absolute;
 	padding: 10px;
 	width: 200px;
-}
-#register_button a {
 	color: #fff;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	text-decoration: none;
+	
+	font-size: 1.33em;
+}
+#register_button {
+	background: #00a99d;
+	top: -2px;
+}
+#register_button_shadow {
+	background: #008f85;
+	top: 1px;
+}
+#register_button:hover {
+	top: 0;
 }
 
 footer {
@@ -108,16 +124,33 @@ footer {
 	clear: both;
 }
 
-#float_idea {
+#float_idea, #float_idea_shadow {
 	display: block;
+	position: absolute;
+	padding: 10px;
+
+	right: 0;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	font-size: 1.33em;
+}
+#float_idea {
 	background: #f5ab18;
 	color: #fff;
-	padding: 10px;
-	font-size: 1.33em;
-	margin-bottom: 1em;
+
+	bottom: 23px;
+}
+#float_idea_shadow {
+	background: #cc8f14;
 	
-	float: right;
-	clear: both;
+	bottom: 20px;
+}
+#float_idea:hover {
+	text-decoration: none;
+	bottom: 21px;
 }
 
 /* Idea create page */

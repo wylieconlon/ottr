@@ -2,7 +2,29 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= render 'idea' %>
+<h2><%= @idea.what %></h2>
+<p>
+  <b>Where:</b>
+  <%= @idea.where %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @idea.when %>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= User.find(@idea.organizer).email %>
+</p>
+
+
+<% if current_user.id == @idea.organizer %>
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Destroy', @idea, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<%= link_to 'Back', ideas_path %>
 
 <% if signed_in? %>
 <%= render 'shared/commenter' %>

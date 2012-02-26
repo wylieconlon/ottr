@@ -1,7 +1,5 @@
 <div id="idea_list">
 
-<%= link_to "Float an Idea", new_idea_path, :id => "float_idea" %>
-
 <% if @ideas.empty? %>
 <p>Nothing to Do! Float Something!</p>
 <% else %>
@@ -14,11 +12,6 @@
 	<div class="time"><%= idea.when %></div>
 	
 	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
-	
-	<% if current_user.id == idea.organizer %>
-	<%= link_to 'Edit', edit_idea_path(idea) %>
-	<%= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete %>
-	<% end %>
 	</li>
 <% end %>
 </ul>
