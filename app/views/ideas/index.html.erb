@@ -1,5 +1,8 @@
 <h1>Listing ideas</h1>
 
+<% if @ideas.nil? %>
+<p>Nothing to Do! Float Something!</p>
+<% else %>
 <table>
   <tr>
     <th>What</th>
@@ -16,7 +19,7 @@
     <td><%= idea.what %></td>
     <td><%= idea.where %></td>
     <td><%= idea.when %></td>
-    <td><%= idea.who %></td>
+    <td><%= User.find(idea.organizer).email %></td>
     <td><%= link_to 'Show', idea %></td>
     <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
     <td><%= link_to 'Destroy', idea, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -25,5 +28,5 @@
 </table>
 
 <br />
-
+<% end %>
 <%= link_to 'New Idea', new_idea_path %>

@@ -17,7 +17,7 @@
 
 <p>
   <b>Who:</b>
-  <%= @idea.who %>
+  <%= User.find(@idea.organizer) %>
 </p>
 
 
