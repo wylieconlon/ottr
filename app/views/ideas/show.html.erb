@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>What:</b>
+  <%= @idea.what %>
+</p>
+
+<p>
+  <b>Where:</b>
+  <%= @idea.where %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @idea.when %>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= @idea.who %>
+</p>
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
