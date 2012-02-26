@@ -1,10 +1,13 @@
 <%= form_for(@comment) do |f| %>
+<%= f.hidden_field :idea_id, :value => @idea.id %>
+
+<div class="action">
+	<div id="comment_submit_shadow"></div>
+	<%= f.submit "Comment" %>
+</div>
+
 <div class="field">
 	<%= f.text_field :message, :placeholder => "Write a comment" %>
-</div>
-<%= f.hidden_field :idea_id, :value => @idea.id %>
-<div class="actions">
-	<%= f.submit %>
 </div>
 
 <div class="clearfix"></div>

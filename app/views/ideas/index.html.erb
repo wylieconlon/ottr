@@ -1,12 +1,17 @@
 <div id="idea_list">
 
 <% if @ideas.empty? %>
-<p>Nothing to Do! Float Something!</p>
+<div class="idea">
+<h3>You don't have any floated ideas!</h3>
+<p>Get started</p>
+</div>
 <% else %>
 <ul>
 <% @ideas.each do |idea| %>
 	<li class="idea">
 	<h2><%= link_to idea.what, idea %></h2>
+	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
+	<%= link_to "", idea, :class => "arrow" %>
 	
 	<div class="actions">
 		<% whereText = idea.where.empty? ? "Anywhere" : idea.where %>
@@ -17,7 +22,6 @@
 		<div class="time"><span class="icon time"></span><%= whenText %></div>
 	</div>
 	
-	<div class="ago"><%= time_ago_in_words(idea.updated_at) %> ago</div>
 	</li>
 <% end %>
 </ul>

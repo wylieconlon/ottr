@@ -197,7 +197,8 @@ footer {
 	border-radius: 10px;
 }
 
-.idea, .idea {
+.idea{
+	position: relative;
 	background: #fff;
 	padding: 20px;
 	border-bottom: 2px solid #008f85;
@@ -205,6 +206,16 @@ footer {
 	clear: both;
 }
 
+.idea h2 {
+	display: inline-block;
+}
+.idea .ago {
+	display: inline-block;
+	color: #666;
+}
+.idea .actions {
+	clear: both;
+}
 .idea .actions div {
 	float: left;
 	margin-right: 20px;
@@ -237,6 +248,23 @@ footer {
 #float_idea:hover {
 	text-decoration: none;
 	bottom: 21px;
+}
+
+.arrow {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 24px;
+	height: 24px;
+	background-image: url('/images/arrow.png');
+}
+.arrow:hover {
+	background-position: -24px 0;
+}
+
+.user_controls {
+	display: block;
+	margin-top: 1em;
 }
 
 /* Idea create page */
@@ -275,28 +303,56 @@ footer {
 	margin-bottom: 1em;
 }
 
-#comment_message {
-	float: left;
-	width: 90%;
-	border: 1px solid #ccc;
+#new_comment .field {
+	margin-right: 160px;
 }
-#comment_submit {
-	float: left;
-	width: 10%;
-	padding: 10px;
+
+#comment_message {
+	width: 100%;
+	border: 3px solid #ccc;
+	margin-right: 140px;
+}
+#new_comment .action {
+	position: relative;
+	float: right;
+	width: 120px;
+	height: 35px;
+}
+#comment_submit, #comment_submit_shadow {
+	position: absolute;
+	
 	background: #00a99d;
+	width: 120px;
+	height: 35px;
 	border: 0;
 	color: #fff;
-
+	
+	font-size: 1.33em;
+	text-align: center;
+	
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
+	
+	cursor: pointer;
+}
+#comment_submit {
+	top: -1px;
+}
+#comment_submit:hover {
+	top: 1px;
+}
+#comment_submit_shadow {
+	background: #008f85;
+	top: 2px;
 }
 
 .comment {
 	font-size: 1.16em;
 	padding: 10px;
-	border-bottom: 1px solid #ccc;
+	border: 1px solid #ccc;
+	border-bottom-width: 2px;
+	margin-bottom: .5em;
 }
 
 div.field, div.actions {

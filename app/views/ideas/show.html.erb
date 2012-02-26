@@ -1,7 +1,7 @@
 <div id="idea_page">
 
 <div class="idea_details idea">
-<h2><%= @idea.what %></h2>
+<h2><%= @idea.what.empty? ? "No title" : @idea.what %></h2>
 <div class="ago"><%= time_ago_in_words(@idea.updated_at) %> ago</div>
 
 <div class="actions">
@@ -15,9 +15,11 @@
 
 <div class="clear"></div>
 
-<% if current_user.id == @idea.organizer %>
+<% if signed_in? && current_user.id == @idea.organizer %>
+<div class="user_controls">
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Destroy', @idea, :confirm => 'Are you sure?', :method => :delete %>
+</div>
 <% end %>
 
 <%= link_to 'Back', ideas_path %>
@@ -26,8 +28,8 @@
 
 <% if signed_in? %>
 <%= render 'shared/commenter' %>
+<% end %>
 <ul>
 <%= render @comments %>
 </ul>
-<% end %>
 </div>

@@ -14,7 +14,7 @@
 
 	<section>
 		<% flash.each do |key, value| %>
-			<%= content_tag(:div, value, :class => "flash #{key} container") %>
+			<div class="container"><%= content_tag(:div, value, :class => "flash #{key}") %></div>
 		<% end %>
 		<% if is_not_splashpage? %><div class="container"><% end %>
 		<%= yield %>
