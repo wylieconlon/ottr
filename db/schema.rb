@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226064224) do
+ActiveRecord::Schema.define(:version => 20120226092726) do
 
   create_table "comments", :force => true do |t|
     t.integer  "idea_id"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20120226064224) do
   create_table "ideas_users", :id => false, :force => true do |t|
     t.integer "idea_id"
     t.integer "user_id"
+  end
+
+  create_table "invites", :force => true do |t|
+    t.string   "email"
+    t.integer  "idea_id"
+    t.integer  "vote"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -60,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120226064224) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "voter_id"
-    t.integer  "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007fb29149f228>"
+    t.integer  "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007f8c5b9573f8>"
   end
 
 end
