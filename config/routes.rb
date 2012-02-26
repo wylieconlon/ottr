@@ -2,9 +2,6 @@ OttrApp::Application.routes.draw do
   resources :ideas
   resources :comments
   
-  match '/app', :to => 'app#index'
-  match '/app/new', :to => 'app#new'
-
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   # The priority is based upon order of creation:
