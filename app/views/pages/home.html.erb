@@ -1,17 +1,3 @@
-<% if signed_in? %>
-
-<ul>
-<% current_user.ideas.each do |idea| %>
-	<li><%= idea.inspect %></li>
-<% end %>
-</ul>
-
-<h1>Easy planning.</h1>
-
-<h1>The User is Signed In: <%= current_user.email %></h1>
-
-<% else %>
-
 <div id="home">
 <div id="banner">
 	<div class="container_12">
@@ -30,6 +16,4 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
-
 </div>
-<% end %>
