@@ -169,42 +169,6 @@ header {
 	}	
 }
 
-
-/*#register_container {
-	position: relative;
-	font-weight: 900;
-	font-size: 2em;
-	text-align: center;
-	left: 0;
-	bottom: 0;
-	width: 200px;
-}
-#register_button, #register_button_shadow {
-	position: absolute;
-	padding: 10px;
-	width: 200px;
-	color: #fff;
-
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	
-	text-decoration: none;
-	
-	font-size: 1.33em;
-}
-#register_button {
-	background: #00a99d;
-	bottom: 2px;
-}
-#register_button_shadow {
-	background: #008f85;
-	bottom: -1px;
-}
-#register_button:hover {
-	bottom: 0;
-}*/
-
 footer {
 	margin-top: 2em;
 	margin-bottom: 2em;
