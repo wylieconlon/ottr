@@ -14,7 +14,7 @@
   <div class="field">
     <%= f.text_field :what, :placeholder => "What's the idea?" %>
   </div>
-  <div class="">
+  <div class="fieldset">
 	  <div class="field">
 		<%= f.text_field :where, :placeholder => "Where?" %>
 	  </div>
@@ -27,6 +27,10 @@
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <div id="idea_submit_shadow"></div>
+    <%= f.submit "Float it!" %>
   </div>
+  <!--<span id="cancel">or <%= link_to 'cancel', ideas_path %></span>-->
+  
+  <div class="clear"></div>
 <% end %>

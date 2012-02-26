@@ -283,9 +283,69 @@ footer {
 	border-radius: 3px;
 }
 
-#idea_what {
-	font-size: 2em;
+#idea_create .field input, #idea_edit .field input {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	width: 100%;
+	border-bottom: 2px solid #008f85;
+	font-size: 1.33em;
+}
+
+#idea_create #idea_what, #idea_edit #idea_what,
+#idea_create #idea_submit, #idea_edit #idea_submit {
+	font-size: 2em;
+	font-weight: bold;
+}
+#idea_create .fieldset .field, #idea_edit .fieldset .field {
+	float: left;
+	width: 49%;
+}
+#idea_create .fieldset .field:first-child,
+#idea_edit .fieldset .field:first-child{
+	margin-right: 2%;
+}
+
+#idea_create .actions, #idea_edit .actions {
+	position: relative;
+	float: left;
+	height: 51px;
+	width: 200px;
+	margin-top: 20px;
+}
+#idea_submit, #idea_submit_shadow {
+	position: absolute;
+	width: 200px;
+	height: 48px;
+	border: 0;
+	margin: 0;
+	
+	color: #fff;
+	font-size: 1.33em;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	cursor: pointer;
+}
+#idea_submit {
+	top: -1px;
+	background: #f5ab18;
+	width: 200px;
+}
+#idea_submit:hover {
+	top: 1px;
+}
+#idea_submit_shadow {
+	top: 2px;
+	background: #cc8f14;
+}
+#idea_create #cancel, #idea_edit #cancel,
+#idea_create #cancel a, #idea_edit #cancel a {
+	color: #fff;
+}
+#idea_create #cancel a, #idea_edit #cancel a {
+	text-decoration: underline;
 }
 
 
