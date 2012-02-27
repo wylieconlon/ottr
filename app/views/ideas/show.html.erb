@@ -1,7 +1,7 @@
 <div id="idea_page">
 
 <div class="idea_details idea">
-<h2><%= @idea.what.empty? ? "No title" : @idea.what %></h2>
+<h2><%= @idea.what.empty? ? "Let's hang out" : @idea.what %></h2>
 <div class="ago"><%= time_ago_in_words(@idea.updated_at) %> ago</div>
 
 <div class="actions">
