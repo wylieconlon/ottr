@@ -1,5 +1,6 @@
 module ApplicationHelper
   def signed_in?
+    puts "------------ Current User '#{current_user.inspect}'"
     !current_user.nil?
   end
   

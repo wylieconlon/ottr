@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
   def create
-    @attr = { :message => params[:comment][:message],
-              :idea_id => params[:comment][:idea_id],
-              :commenter_id => current_user}
+    puts "!@! ---------- comments.create"
+              
+    puts "Comments Current User #{current_user.inspect}"
     @idea = Idea.find(params[:comment][:idea_id])
     @comment = Comment.create(@attr)
-    @comment.message = @attr[:message]
-    @comment.idea_id = @attr[:idea_id]
-    @comment.commenter_id = @attr[:commenter_id]
+    @comment.message = params[:comment][:message]
+    @comment.idea_id = params[:comment][:idea_id]
+    @comment.commenter_id = current_user.id
     puts "#{@comment.idea_id}-#{@comment.commenter_id}-#{@comment.message}"
     respond_to do |format|
       if @comment.save

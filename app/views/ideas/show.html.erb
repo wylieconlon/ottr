@@ -16,7 +16,7 @@
 </div>
 
 <div class="clear"></div>
-
+<% puts "-------------- Show Idea #{@idea.inspect}"%>
 <% if signed_in? && current_user.id == @idea.organizer %>
 <div class="user_controls">
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
