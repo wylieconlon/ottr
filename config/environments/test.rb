@@ -32,4 +32,7 @@ OttrApp::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  config.secret_token = "pVeTUrhqeoezYowJUajZNSlanZYQ30SjjSl2gWc2SrEZVnzz6bvipCR0WhFO4mn"
+
 end

@@ -22,5 +22,8 @@ OttrApp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  config.secret_token = "sqBtwJ0MTuYxzsHo4YDefczF2RQL7IYHOWQKaKJpg1K30GiENPaiGsSa4WSoYUX"
+
 end
 
